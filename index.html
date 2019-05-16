@@ -1,0 +1,45 @@
+<HTML>
+    <head>
+        <link rel="stylesheet" href="style/dropdown.css">
+        <link rel="stylesheet" href="style/style.css">
+        <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "{}",
+            authDomain: "{}.firebaseapp.com",
+            databaseURL: "https://{}.firebaseio.com",
+            projectId: "{}",
+            storageBucket: "{}.appspot.com",
+            messagingSenderId: "{}"
+        };
+        firebase.initializeApp(config);
+        </script>
+        <script type="text/javascript" src="script/date.js"></script>
+        <script type="text/javascript" src="script/domo.js"></script>
+        <script type="text/javascript" src="script/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="script/script.js"></script>
+    </head>
+    <body>
+        <div id='title_box'>
+            <h1>L2 Public Comments</h1>
+        </div>
+        <div id='bucket_box'>
+            <ul class="tab" id='bucket'>
+                <li><a href="javascript:void(0)" class="tablinks" onclick="bucket_change('Alerts-Mobile')" id='Alerts-Mobile'>Alerts/Mobile</a></li>
+                <li><a href="javascript:void(0)" class="tablinks" onclick="bucket_change('Card-UI')" id='Card-UI'>Card/UI</a></li>
+                <li><a href="javascript:void(0)" class="tablinks" onclick="bucket_change('Connector')" id='Connector'>Connector</a></li>
+                <li><a href="javascript:void(0)" class="tablinks" onclick="bucket_change('Dataflow')" id='Dataflow'>Dataflow</a></li>
+                <li><a href="javascript:void(0)" class="tablinks" onclick="bucket_change('DataQuery')" id='DataQuery'>DataQuery</a></li>
+                <li><a href="javascript:void(0)" class="tablinks" onclick="bucket_change('WorkBench')" id='WorkBench'>WorkBench</a></li>
+                <li><a href="javascript:void(0)" class="tablinks" onclick="bucket_change('Other')" id='Other'>Other..</a></li>
+            </ul>
+        </div>
+        <div id='input_box'>
+            <textarea id='input'   rows="10" cols="30" placeholder="Comments..." ></textarea>
+        </div>
+        <div id='submit_box'>
+            <input type='button' id='submit' onclick="submit()" value="SUBMIT"></a>
+        </div>
+    </body>
+</HTML>
